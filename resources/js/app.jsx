@@ -3,6 +3,9 @@ import './config';
 
 import { createRoot } from 'react-dom/client'
 import { createInertiaApp } from '@inertiajs/inertia-react'
+import { Inertia } from "@inertiajs/inertia";
+
+window.Inertia = Inertia;
 
 createInertiaApp({
     resolve: name => {
