@@ -1,12 +1,14 @@
-export function showLoader() {
+import Toastify from 'toastify-js';
+
+function showLoader() {
     document.getElementById('loader').classList.remove('d-none');
 }
 
-export function hideLoader() {
+function hideLoader() {
     document.getElementById('loader').classList.add('d-none');
 }
 
-export function successToast(msg) {
+function successToast(msg) {
     Toastify({
         gravity: "bottom", // `top` or `bottom`
         position: "center", // `left`, `center` or `right`
@@ -18,7 +20,7 @@ export function successToast(msg) {
     }).showToast();
 }
 
-export function errorToast(msg) {
+function errorToast(msg) {
     Toastify({
         gravity: "bottom", // `top` or `bottom`
         position: "center", // `left`, `center` or `right`
@@ -29,3 +31,8 @@ export function errorToast(msg) {
         }
     }).showToast();
 }
+
+window.showLoader = showLoader;
+window.hideLoader = hideLoader;
+window.successToast = successToast;
+window.errorToast = errorToast;
