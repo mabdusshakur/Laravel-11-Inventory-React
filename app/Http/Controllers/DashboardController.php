@@ -3,46 +3,47 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class DashboardController extends Controller
 {
     function dashboardPage()
     {
-        return view('dashboard.dashboard-page');
+        return Inertia::render('DashboardPage');
     }
 
     function customerPage()
     {
-        return view('dashboard.customer-page');
+        return Inertia::render('CustomerPage');
     }
 
     function categoryPage()
     {
-        return view('dashboard.category-page');
+        return Inertia::render('CategoryPage');
     }
 
     function productPage()
     {
-        return view('dashboard.product-page');
+        return Inertia::render('ProductPage');
     }
 
     function salePage()
     {
-        return view('dashboard.sale-page');
+        return Inertia::render('SalePage');
     }
 
     function invoicePage()
     {
-        return view('dashboard.invoice-page');
+        return Inertia::render('InvoicePage');
     }
 
     function reportPage()
     {
-        return view('dashboard.report-page');
+        return Inertia::render('ReportPage');
     }
 
     function profilePage()
     {
-        return view('dashboard.profile-page');
+        return Inertia::render('ProfilePage');
     }
 }
