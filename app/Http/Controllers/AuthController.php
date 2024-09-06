@@ -3,31 +3,32 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class AuthController extends Controller
 {
     function loginPage()
     {
-        return view('auth.login-page');
+        return Inertia::render('Auth/LoginPage');
     }
 
     function registerPage()
     {
-        return view('auth.register-page');
+        return Inertia::render('Auth/RegisterPage');
     }
 
     function sendOtpPage()
     {
-        return view('auth.send-otp-page');
+        return Inertia::render('Auth/SendOtpPage');
     }
 
     function verifyOtpPage()
     {
-        return view('auth.verify-otp-page');
+        return Inertia::render('Auth/VerifyOtpPage');
     }
 
     function resetPasswordPage()
     {
-        return view('auth.reset-password-page');
+        return Inertia::render('Auth/ResetPasswordPage');
     }
 }
