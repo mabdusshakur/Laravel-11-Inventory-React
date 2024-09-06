@@ -1,4 +1,3 @@
-import { Link } from "@inertiajs/react";
 import AppLayout from "../Layouts/AppLayout";
 
 function Home() {
