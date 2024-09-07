@@ -19,4 +19,5 @@ Route::get('/invoice', [DashboardController::class, 'invoicePage'])->name('web.i
 Route::get('/report', [DashboardController::class, 'reportPage'])->name('web.report');
 Route::get('/profile', [DashboardController::class, 'profilePage'])->name('web.profile');
 
-Route::view('/', 'home');
+// Route::view('/', 'home');
+Route::inertia('/', 'HomePage');
