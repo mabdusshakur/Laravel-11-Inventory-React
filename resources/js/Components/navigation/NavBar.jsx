@@ -1,6 +1,8 @@
 import { Inertia } from "@inertiajs/inertia";
+import { useAuth } from "../../AuthContext";
 
 function NavBar() {
+    const { logout } = useAuth();
 
     function MenuBarClickHandler() {
         let sideNav = document.getElementById('sideNavRef');
@@ -18,9 +20,10 @@ function NavBar() {
         }
     }
 
-    function logout() {
+    function logoutRequest() {
         axios.post("/api/auth/logout").then(response => {
             if (response.status === 200) {
+                logout();
                 Inertia.visit('/login-page');
             }
         }).catch(error => {
@@ -51,7 +54,7 @@ function NavBar() {
                             <Link className="side-bar-item" href="/profile">
                                 <span className="side-bar-item-caption">Profile</span>
                             </Link>
-                            <Link className="side-bar-item" onClick={logout}>
+                            <Link className="side-bar-item" onClick={logoutRequest}>
                                 <span className="side-bar-item-caption">Logout</span>
                             </Link>
                         </div>
