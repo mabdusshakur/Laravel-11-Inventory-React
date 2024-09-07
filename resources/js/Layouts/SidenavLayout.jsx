@@ -1,8 +1,8 @@
 import NavBar from "../Components/navigation/NavBar";
-
+import PrivateRoute from "../PrivateRoute"
 const SidenavLayout = ({ children }) => {
     return (
-        <>
+        <PrivateRoute>
             <meta charSet="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
             <title>X-Bakery - Dashboard</title>
@@ -64,7 +64,7 @@ const SidenavLayout = ({ children }) => {
             <div className="content" id="contentRef">
                 {children}
             </div>
-        </>
+        </PrivateRoute>
 
     );
 }
