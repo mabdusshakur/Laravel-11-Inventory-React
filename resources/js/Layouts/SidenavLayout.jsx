@@ -1,4 +1,3 @@
-import axios from "axios";
 import NavBar from "../Components/navigation/NavBar";
 
 const SidenavLayout = ({ children }) => {
