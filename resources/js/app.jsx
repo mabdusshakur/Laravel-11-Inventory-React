@@ -9,8 +9,10 @@ import { createRoot } from 'react-dom/client'
 import { createInertiaApp } from '@inertiajs/inertia-react'
 import { Inertia } from "@inertiajs/inertia";
 import { Link } from "@inertiajs/inertia-react";
+import { AuthProvider } from './AuthContext';
 
 import axiosInstance from './axios';
+
 
 window.Inertia = Inertia;
 window.Link = Link;
@@ -24,6 +26,9 @@ createInertiaApp({
         return pages[`./Pages/${name}.jsx`]
     },
     setup({ el, App, props }) {
-        createRoot(el).render(<App {...props} />)
+        createRoot(el).render(
+            <AuthProvider>
+                <App {...props} />
+            </AuthProvider>)
     },
 })
