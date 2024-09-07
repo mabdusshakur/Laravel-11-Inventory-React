@@ -1,9 +1,11 @@
-
+import { useEffect } from 'react';
 function Summary() {
 
-    Summary();
+    useEffect(() => {
+        fetchSummary();
+    }, []);
 
-    async function Summary() {
+    async function fetchSummary() {
         showLoader();
         let res = await axios.get("/api/summary");
         res = res.data[0];

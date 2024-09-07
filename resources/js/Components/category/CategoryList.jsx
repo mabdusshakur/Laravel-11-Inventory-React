@@ -8,7 +8,9 @@ import CategoryDelete from './CategoryDelete';
 function CategoryList() {
     const updateRef = useRef();
 
-    getList();
+    useEffect(() => {
+        getList();
+    }, []);
 
     async function getList() {
         showLoader();

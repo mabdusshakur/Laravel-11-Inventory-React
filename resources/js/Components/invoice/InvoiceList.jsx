@@ -8,7 +8,9 @@ import DataTables from 'datatables.net';
 function InvoiceList() {
     const updateRef = useRef();
 
-    getList();
+    useEffect(() => {
+        getList();
+    }, []);
 
     async function getList() {
 

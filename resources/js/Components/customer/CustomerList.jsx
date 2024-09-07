@@ -8,7 +8,9 @@ import CustomerDelete from './CustomerDelete';
 function CustomerList() {
     const updateRef = useRef();
 
-    getList();
+    useEffect(() => {
+        getList();
+    }, []);
 
 
     async function getList() {
