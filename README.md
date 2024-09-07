@@ -17,3 +17,4 @@
 ## Change Log
 
 -   Added axios interceptor to handle 401 (unauthorized) error globally
+-   Added State authentication
