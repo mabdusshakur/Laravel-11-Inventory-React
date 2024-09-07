@@ -20,7 +20,7 @@ const SidenavLayout = ({ children }) => {
 
     function logout() {
         axios.post("/api/auth/logout");
-        window.location.href = '/login';
+        window.location.href = '/login-page';
     }
 
     return (
@@ -34,19 +34,7 @@ const SidenavLayout = ({ children }) => {
             <link href="/css/animate.min.css" rel="stylesheet" />
             <link href="/css/fontawesome.css" rel="stylesheet" />
             <link href="/css/style.css" rel="stylesheet" />
-            <link href="/css/toastify.min.css" rel="stylesheet" />
-
             <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-
-            <link href="/css/jquery.dataTables.min.css" rel="stylesheet" />
-            <script src="/js/jquery-3.7.0.min.js"></script>
-            <script src="/js/jquery.dataTables.min.js"></script>
-
-            <script src="/js/toastify-js.js"></script>
-            <script src="/js/config.js"></script>
-            <script src="/js/bootstrap.bundle.js"></script>
-
-
 
             <div className="LoadingOverlay d-none" id="loader">
                 <div className="Line-Progress">
@@ -92,7 +80,7 @@ const SidenavLayout = ({ children }) => {
                     <span className="side-bar-item-caption">Dashboard</span>
                 </Link>
 
-                <Link className="side-bar-item" href="/customers">
+                <Link className="side-bar-item" href="/customer">
                     <i className="bi bi-people"></i>
                     <span className="side-bar-item-caption">Customer</span>
                 </Link>
