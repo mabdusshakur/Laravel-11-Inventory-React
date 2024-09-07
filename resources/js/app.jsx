@@ -1,10 +1,9 @@
 import './bootstrap';
 import './config';
 
-import $ from 'jquery'; // Import jQuery
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import $ from 'jquery';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.min';
 
 import { createRoot } from 'react-dom/client'
 import { createInertiaApp } from '@inertiajs/inertia-react'
@@ -13,7 +12,8 @@ import { Link } from "@inertiajs/inertia-react";
 
 window.Inertia = Inertia;
 window.Link = Link;
-window.$ = $; // Make jQuery available globally
+window.$ = $;
+window.bootstrap = bootstrap;
 
 createInertiaApp({
     resolve: name => {
