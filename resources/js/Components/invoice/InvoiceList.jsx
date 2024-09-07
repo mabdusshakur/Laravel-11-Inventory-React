@@ -2,8 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import DataTable from 'datatables.net-react';
 import DT from 'datatables.net-dt';
 import InvoiceDetails from './InvoiceDetails';
-import InvoiceDelete from './InvoiceDelete';
-import DataTables from 'datatables.net';
+import InvoiceDelete from './InvoiceDelete';;
 
 function InvoiceList() {
     const updateRef = useRef();
