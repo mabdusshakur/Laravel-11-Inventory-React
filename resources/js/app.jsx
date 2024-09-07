@@ -10,10 +10,13 @@ import { createInertiaApp } from '@inertiajs/inertia-react'
 import { Inertia } from "@inertiajs/inertia";
 import { Link } from "@inertiajs/inertia-react";
 
+import axiosInstance from './axios';
+
 window.Inertia = Inertia;
 window.Link = Link;
 window.$ = $;
 window.bootstrap = bootstrap;
+window.axios = axiosInstance;
 
 createInertiaApp({
     resolve: name => {
