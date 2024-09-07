@@ -42,7 +42,7 @@ function CustomerList() {
 
         $('.editBtn').on('click', async function () {
             let id = $(this).data('id');
-            $("#update-modal").show();
+            new bootstrap.Modal(document.getElementById('update-modal')).show();
             if (updateRef.current) {
                 await updateRef.current.FillUpUpdateForm(id);
             } else {
@@ -52,7 +52,7 @@ function CustomerList() {
 
         $('.deleteBtn').on('click', function () {
             let id = $(this).data('id');
-            $("#delete-modal").show();
+            new bootstrap.Modal(document.getElementById('delete-modal')).show();
             $("#deleteID").val(id);
         })
 
