@@ -70,7 +70,7 @@ function ProfileCreate() {
                                 <div className="row m-0 p-0">
                                     <div className="col-md-4 p-2">
                                         <label>Email Address</label>
-                                        <input className="form-control" id="email" type="email" readonly placeholder="User Email" />
+                                        <input className="form-control" id="email" type="email" readOnly placeholder="User Email" />
                                     </div>
                                     <div className="col-md-4 p-2">
                                         <label>First Name</label>
