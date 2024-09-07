@@ -1,4 +1,6 @@
+import { useAuth } from "../../AuthContext";
 function LoginForm() {
+    const { login } = useAuth();
 
     async function SubmitLogin() {
         let email = document.getElementById('email').value;
@@ -17,6 +19,7 @@ function LoginForm() {
             hideLoader()
             if (res.status === 200 && res.data['success'] === true) {
                 // setLoggedIn();
+                login();
                 Inertia.visit('/dashboard');
             } else {
                 errorToast(res.data['message']);
