@@ -8,6 +8,8 @@ const ProductUpdate = forwardRef((props, ref) => {
     async function UpdateFillCategoryDropDown() {
         let res = await axios.get("/api/categories")
         res = res.data[0];
+        $("#productCategoryUpdate").empty();
+        $("#productCategoryUpdate").append(`<option value="">Select Category</option>`);
         res.forEach(function (item, i) {
             let option = `<option value="${item['id']}">${item['name']}</option>`
             $("#productCategoryUpdate").append(option);
