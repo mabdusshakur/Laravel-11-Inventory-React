@@ -1,4 +1,5 @@
 import Toastify from 'toastify-js';
+import 'toastify-js/src/toastify.css'; // Ensure the CSS is imported
 
 function showLoader() {
     document.getElementById('loader').classList.remove('d-none');
