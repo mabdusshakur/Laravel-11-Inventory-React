@@ -3,6 +3,7 @@ const CustomerDelete = (props) => {
     function closeDeleteModal() {
         document.getElementById('deleteID').value = '';
         $("#delete-modal").hide();
+        $("#delete-modal-close").trigger('click');
     }
     async function itemDelete() {
         let id = document.getElementById('deleteID').value;

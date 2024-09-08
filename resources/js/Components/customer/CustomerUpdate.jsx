@@ -18,8 +18,8 @@ const CustomerUpdate = forwardRef((props, ref) => {
     }
 
     function closeUpdateModal() {
-        document.getElementById('update-form').reset();
-        $("#update-modal").hide();
+        $('#update-form').trigger('reset');
+        $('#update-modal-close').trigger('click');
     }
     async function Update() {
 
